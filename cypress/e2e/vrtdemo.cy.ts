@@ -8,16 +8,24 @@ describe("VRT demo",() => {
     cy.vrtStop();
   });
   
-  it("Request Free Literature", () => {
-    cy.visit("https://yssofindia.org/about/request-free-literature");
+  it("google", () => {
+    cy.visit("https://www.google.com/");
   
-    cy.vrtTrack("Request Free Literature");
+    cy.vrtTrack("google");
   });
   
-  it("HINDI - YSS/SRF President Swami Chidanandaji’s India Tour — 2023", () => {
-    cy.visit("https://yssofindia.org/hi/blog/yss-srf-president-and-spiritual-head-sri-sri-swami-chidanandajis-india-tour-2023");
-  
-    cy.vrtTrack("HINDI - YSS/SRF President Swami Chidanandaji’s India Tour — 2023");
+  it("cypress", () => {
+    cy.visit("  https://example.cypress.io");
+
+    cy.vrtTrack("cypress");
   });
+
+  it("amazon", () => {
+    cy.visit("https://www.amazon.in/");
+
+    cy.vrtTrack("amazon");
+  });
+
+  
   
 })

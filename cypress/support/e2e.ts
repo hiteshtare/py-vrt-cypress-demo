@@ -23,7 +23,7 @@ import {
   addVrtTrackCommand,
   addVrtStartCommand,
   addVrtStopCommand,
-} from "@visual-regression-tracker/agent-cypress";
+} from "../../lib/commands";
 
 addVrtStartCommand();
 addVrtStopCommand();

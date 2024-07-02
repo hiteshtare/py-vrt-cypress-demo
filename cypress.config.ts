@@ -1,7 +1,7 @@
-const { defineConfig } = require("cypress");
-const { addVisualRegressionTrackerPlugin } = require("@visual-regression-tracker/agent-cypress");
+import { defineConfig } from 'cypress';
+import { addVisualRegressionTrackerPlugin } from "./lib/plugin";
 
-module.exports = defineConfig({
+export default defineConfig({
   e2e: {
     env: {
       visualRegressionTracker: {
@@ -12,13 +12,19 @@ module.exports = defineConfig({
         enableSoftAssert: true, // Log errors instead of throwing exceptions
       },
     },
+    //By default this is true
     watchForFileChanges: false,
-    defaultCommandTimeout: 3000,
-    chromeWebSecurity: false,
+    //By default this is 4000
+    defaultCommandTimeout: 10000,
+    //By default this is true, Cypress will record a video of the test run when running headlessly.
     video: true,
+    // Resize the viewport to 1280px x 768px
+    viewportWidth: 1280,
+    viewportHeight: 768,
+    // baseUrl: 'https://yssofindia.org/',
     setupNodeEvents(on, config) {
       addVisualRegressionTrackerPlugin(on, config);
       return config;
     },
-  },
+  }
 });
