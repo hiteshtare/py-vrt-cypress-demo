@@ -23,7 +23,7 @@ import {
   addVrtTrackCommand,
   addVrtStartCommand,
   addVrtStopCommand,
-} from "../../lib/commands";
+} from "../lib/commands";
 
 addVrtStartCommand();
 addVrtStopCommand();

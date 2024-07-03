@@ -1,5 +1,5 @@
 import { defineConfig } from 'cypress';
-import { addVisualRegressionTrackerPlugin } from "./lib/plugin";
+import { addVisualRegressionTrackerPlugin } from "./cypress/lib/plugin";
 
 export default defineConfig({
   e2e: {
