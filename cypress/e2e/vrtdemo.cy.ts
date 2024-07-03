@@ -8,22 +8,22 @@ describe("VRT demo",() => {
     cy.vrtStop();
   });
   
-  it("google", () => {
-    cy.visit("https://www.google.com/");
+  it("online-meditation/calendar", () => {
+    cy.visit("/online-meditation/calendar");
   
-    cy.vrtTrack("google");
+    cy.vrtTrack("online-meditation/calendar");
   });
   
-  it("cypress", () => {
-    cy.visit("  https://example.cypress.io");
+  it("online-meditation", () => {
+    cy.visit("/online-meditation");
 
-    cy.vrtTrack("cypress");
+    cy.vrtTrack("online-meditation");
   });
 
-  it("amazon", () => {
-    cy.visit("https://www.amazon.in/");
+  it("online-meditation/helpdesk", () => {
+    cy.visit("/online-meditation/helpdesk");
 
-    cy.vrtTrack("amazon");
+    cy.vrtTrack("online-meditation/helpdesk");
   });
 
   

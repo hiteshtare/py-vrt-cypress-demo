@@ -21,7 +21,8 @@ export default defineConfig({
     // Resize the viewport to 1280px x 768px
     viewportWidth: 1280,
     viewportHeight: 768,
-    // baseUrl: 'https://yssofindia.org/',
+    baseUrl: 'https://yssofindia.org/',
+    chromeWebSecurity: false,
     setupNodeEvents(on, config) {
       addVisualRegressionTrackerPlugin(on, config);
       return config;
