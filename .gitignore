@@ -33,3 +33,6 @@ js/*.js
 imageUploads
 db
 *.yml
+
+cypress-image-diff-html-report
+cypress-image-diff-screenshots

@@ -14,5 +14,10 @@
     "@visual-regression-tracker/agent-cypress": "^5.7.0",
     "cypress": "^12.14.0",
     "typescript": "^5.4.5"
+  },
+  "devDependencies": {
+    "cypress-image-diff-html-report": "^2.1.2",
+    "cypress-image-diff-js": "^2.1.3",
+    "jest": "^27.0.6"
   }
 }

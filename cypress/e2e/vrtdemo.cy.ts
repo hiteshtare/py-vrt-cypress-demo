@@ -1,29 +1,21 @@
 
 describe("VRT demo",() => { 
-  before(() => {
-    cy.vrtStart();
+  it("should compare screenshot of the calendar", () => {
+    cy.visit("/calendar");
+  
+    cy.compareSnapshot("calendar");
   });
   
-  after(() => {
-    cy.vrtStop();
-  });
-  
-  it("online-meditation/calendar", () => {
-    cy.visit("/online-meditation/calendar");
-  
-    cy.vrtTrack("online-meditation/calendar");
-  });
-  
-  it("online-meditation", () => {
+  it("should compare screenshot of the online-meditation", () => {
     cy.visit("/online-meditation");
 
-    cy.vrtTrack("online-meditation");
+    cy.compareSnapshot("online-meditation");
   });
 
-  it("online-meditation/helpdesk", () => {
-    cy.visit("/online-meditation/helpdesk");
+  it("should compare screenshot of the helpdesk", () => {
+    cy.visit("/helpdesk");
 
-    cy.vrtTrack("online-meditation/helpdesk");
+    cy.compareSnapshot("helpdesk");
   });
 
   

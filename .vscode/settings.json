@@ -1,3 +1,4 @@
 {
-  "livePreview.defaultPreviewPath": "/mochawesome-report/mochawesome.html"
+  "livePreview.defaultPreviewPath": "/mochawesome-report/mochawesome.html",
+  "liveServer.settings.port": 5501
 }

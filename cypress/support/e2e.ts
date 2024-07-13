@@ -19,12 +19,6 @@ import "./commands";
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 
-import {
-  addVrtTrackCommand,
-  addVrtStartCommand,
-  addVrtStopCommand,
-} from "../lib/commands";
-
-addVrtStartCommand();
-addVrtStopCommand();
-addVrtTrackCommand();
+after(() => {
+  cy.task('generateReport')
+})

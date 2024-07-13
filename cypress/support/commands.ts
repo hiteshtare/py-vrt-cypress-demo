@@ -29,3 +29,6 @@ Cypress.on('uncaught:exception', (err, runnable) => {
   // failing the test
   return false
 })
+
+import compareSnapshotCommand from 'cypress-image-diff-js';
+compareSnapshotCommand();

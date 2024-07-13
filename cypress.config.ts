@@ -1,17 +1,8 @@
 import { defineConfig } from 'cypress';
-import { addVisualRegressionTrackerPlugin } from "./cypress/lib/plugin";
+import getCompareSnapshotsPlugin from 'cypress-image-diff-js/plugin';
 
 export default defineConfig({
   e2e: {
-    env: {
-      visualRegressionTracker: {
-        apiUrl: "http://localhost:4200", // URL where backend is running
-        project: "VRT Cypress Demo", // Project name or ID
-        apiKey: "DEFAULTUSERAPIKEYTOBECHANGED", // User apiKey
-        branchName: "develop-py", // Current git branch
-        enableSoftAssert: true, // Log errors instead of throwing exceptions
-      },
-    },
     //By default this is true
     watchForFileChanges: false,
     //By default this is 4000
@@ -22,10 +13,8 @@ export default defineConfig({
     viewportWidth: 1280,
     viewportHeight: 768,
     baseUrl: 'https://yssofindia.org/',
-    chromeWebSecurity: false,
     setupNodeEvents(on, config) {
-      addVisualRegressionTrackerPlugin(on, config);
-      return config;
+      return getCompareSnapshotsPlugin(on, config);
     },
   }
 });
