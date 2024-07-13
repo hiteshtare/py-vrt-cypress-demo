@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "npm run cypress-test || npm run posttest",
-    "cypress-test": "cypress run"
+    "cypress-test": "cypress run",
+    "view-test": "cypress-image-diff-html-report start --autoOpen"
   },
   "keywords": [],
   "author": "Hitesh Tare",
