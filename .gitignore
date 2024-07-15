@@ -36,3 +36,8 @@ db
 
 cypress-image-diff-html-report
 cypress-image-diff-screenshots
+
+# Cypress-Parallel
+cypress/parallel-weights.json
+runner-results/
+multi-reporter-config.json

@@ -6,8 +6,15 @@
   "scripts": {
     "test": "npm run cypress-test || npm run posttest",
     "cypress-test": "cypress run",
-    "generate-report": "cypress-image-diff-html-report generate",
-    "view-test": "cypress-image-diff-html-report start --autoOpen"
+    "posttest": "npm run vrt:report",
+    "vrt:report": "cypress-image-diff-html-report generate",
+    "vrt:view-test": "cypress-image-diff-html-report start --autoOpen",
+    "test:staging": "npm run cypress-test:staging || npm run posttest:staging",
+    "cypress-test:staging": "cypress run --env environmentName=staging",
+    "posttest:staging": "npm run vrt:view-test",
+    "test:release": "npm run --env cypress-test:release || npm run posttest:release",
+    "cypress-test:release": "cypress run --env environmentName=release",
+    "posttest:release": "npm run vrt:report"
   },
   "keywords": [],
   "author": "Hitesh Tare",
@@ -15,6 +22,7 @@
   "dependencies": {
     "@visual-regression-tracker/agent-cypress": "^5.7.0",
     "cypress": "^12.14.0",
+    "cypress-parallel": "^0.14.0",
     "typescript": "^5.4.5"
   },
   "devDependencies": {
