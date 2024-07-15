@@ -6,6 +6,7 @@
   "scripts": {
     "test": "npm run cypress-test || npm run posttest",
     "cypress-test": "cypress run",
+    "generate-report": "cypress-image-diff-html-report generate",
     "view-test": "cypress-image-diff-html-report start --autoOpen"
   },
   "keywords": [],
